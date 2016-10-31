@@ -134,7 +134,7 @@ NSString *keyForSearchResultPerPage(DZNPhotoPickerControllerServices service)
         case DZNPhotoPickerControllerService500px:              return @"rpp";
         case DZNPhotoPickerControllerServiceFlickr:             return @"per_page";
         case DZNPhotoPickerControllerServiceInstagram:          return @"count";
-        case DZNPhotoPickerControllerServiceGoogleImages:       return @"num";
+        //case DZNPhotoPickerControllerServiceGoogleImages:       return @"num";
         case DZNPhotoPickerControllerServiceGiphy:              return @"limit";
         default:                                                return nil;
     }
@@ -143,6 +143,7 @@ NSString *keyForSearchResultPerPage(DZNPhotoPickerControllerServices service)
 NSString *keyForSearchPage(DZNPhotoPickerControllerServices service)
 {
     switch (service) {
+        case DZNPhotoPickerControllerServiceGoogleImages:       return nil;
         case DZNPhotoPickerControllerServiceBingImages:         return nil;
         default:                                                return @"page";
     }

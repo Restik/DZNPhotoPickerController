@@ -150,10 +150,8 @@
         [params setObject:[self consumerSecret] forKey:keyForAPIConsumerSecret(self.service)];
         [params setObject:@"image" forKey:@"searchType"];
         [params setObject:@"medium" forKey:@"safe"];
-        
-        if (page > 1) {
-            [params setObject:@((page - 1) * resultPerPage + 1) forKey:@"start"];
-        }
+        resultPerPage = 10;
+        if (page > 0) [params setObject:@(page * resultPerPage + 1) forKey:@"start"];
     }
     else if (self.service == DZNPhotoPickerControllerServiceBingImages)
     {

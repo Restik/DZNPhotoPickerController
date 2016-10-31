@@ -317,9 +317,6 @@ static NSUInteger kDZNPhotoDisplayMinimumColumnCount = 4.0;
     if (self.metadataList.count == 0) {
         return NO;
     }
-    else if (self.metadataList.count%kDZNPhotoDisplayMinimumColumnCount != 0) {
-        return NO;
-    }
     
     return YES;
 }
